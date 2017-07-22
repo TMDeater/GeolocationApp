@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/logintext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:text="Log In"
+        />
+
+    <TextView
+        android:id="@+id/loginname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logintext"
+        android:layout_marginTop="5dp"
+        android:textSize="20dp"
+        android:text="Username:"
+        />
+
+    <EditText
+        android:id="@+id/inputloginname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logintext"
+        android:layout_toRightOf="@id/loginname"
+        android:ems="13"
+        />
+
+    <TextView
+        android:id="@+id/loginpassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/loginname"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:text="Password:"
+        />
+
+    <EditText
+        android:id="@+id/inputloginPW"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/loginname"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@id/loginpassword"
+        android:ems="13"
+        />
+
+    <Button
+        android:id="@+id/loginbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/loginpassword"
+        android:layout_marginTop="10dp"
+        android:text="Log In"
+        />
+
+    <TextView
+        android:id="@+id/signuptext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/loginbutton"
+        android:layout_marginTop="40dp"
+        android:textSize="30dp"
+        android:text="Sign Up"
+        />
+
+    <TextView
+        android:id="@+id/signupname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/signuptext"
+        android:layout_marginTop="5dp"
+        android:textSize="20dp"
+        android:text="Username:"
+        />
+
+    <EditText
+        android:id="@+id/inputsignupname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/signuptext"
+        android:layout_toRightOf="@id/signupname"
+        android:ems="13"
+        />
+
+    <TextView
+        android:id="@+id/signuppassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/signupname"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:text="Password:"
+        />
+
+    <EditText
+        android:id="@+id/inputsignupPW"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/signupname"
+        android:layout_toRightOf="@id/signuppassword"
+        android:layout_marginTop="15dp"
+        android:ems="13"
+        />
+
+    <Button
+        android:id="@+id/signupbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/signuppassword"
+        android:layout_marginTop="10dp"
+        android:text="Sign Up"
+        />
+
+</RelativeLayout>
+
+

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/map"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.msi.geolocationapp.Map">
+
+    <RelativeLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+        <TextView
+            android:id="@+id/startloc"
+            android:layout_width="180dp"
+            android:layout_height="20dp"
+            android:text="Set Start Location"
+            android:textSize="15dp"
+            android:gravity="center"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/holo_purple"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/calculatebutton"
+            android:layout_width="120dp"
+            android:layout_height="20dp"
+            android:text=" Distance"
+            android:textSize="15dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="5dp"
+            android:background="@android:color/holo_blue_light"
+            android:textColor="@android:color/white"/>
+
+        <TextView
+            android:id="@+id/deletebutton"
+            android:layout_width="120dp"
+            android:layout_height="20dp"
+            android:text=" Delete a Location"
+            android:textSize="15dp"
+            android:layout_above="@id/calculatebutton"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="5dp"
+            android:background="@android:color/holo_red_light"
+            android:textColor="@android:color/white"/>
+
+        <TextView
+            android:id="@+id/savebutton"
+            android:layout_width="120dp"
+            android:layout_height="20dp"
+            android:textSize="15dp"
+            android:text=" Save Location"
+            android:layout_above="@id/deletebutton"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="5dp"
+            android:background="@android:color/holo_green_light"
+            android:textColor="@android:color/white"/>
+    </RelativeLayout>
+
+</fragment>

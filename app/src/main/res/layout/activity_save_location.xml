@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.msi.geolocationapp.SaveLocation">
+
+    <TextView
+        android:id="@+id/inputnamestring"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"
+        android:text="Input the name of the location:"/>
+
+    <EditText
+        android:id="@+id/inputboxname"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/inputnamestring"/>
+
+    <TextView
+        android:id="@+id/submitinput"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/inputboxname"
+        android:layout_marginLeft="5dp"
+        android:text="Save"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:background="@android:color/holo_blue_light"
+        android:textColor="@android:color/white"/>
+</RelativeLayout>
