@@ -167,6 +167,7 @@ public class Map extends FragmentActivity implements OnMapReadyCallback {
                 i.putExtra("title",current.getTitle());
                 break;
             case 3:i.setClass(this,CalDist.class);
+                i.putExtra("title",current.getTitle());
                 break;
         }
         startActivity(i);

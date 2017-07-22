@@ -29,6 +29,7 @@ public class DelLocation extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_del_location);
+        setTitle("Delete Location");
 
         skygear = Container.defaultContainer(this);
         publicDB = skygear.getPublicDatabase();
@@ -40,7 +41,7 @@ public class DelLocation extends AppCompatActivity {
         name = new String(i.getStringExtra("title"));
 
         delMsg = (TextView) findViewById(R.id.deleteMsg);
-        backButton = (TextView) findViewById(R.id.backButton);
+        backButton = (TextView) findViewById(R.id.backbutton);
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

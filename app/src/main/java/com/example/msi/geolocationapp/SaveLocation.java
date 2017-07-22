@@ -28,6 +28,7 @@ public class SaveLocation extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_save_location);
+        setTitle("Save Location");
 
         skygear = Container.defaultContainer(this);
         publicDB = skygear.getPublicDatabase();
