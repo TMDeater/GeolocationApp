@@ -40,7 +40,7 @@ public class SaveLocation extends AppCompatActivity {
 
         inputName = (EditText) findViewById(R.id.inputboxname);
 
-        saveButton = (TextView) findViewById(R.id.savebutton);
+        saveButton = (TextView) findViewById(R.id.submitinput);
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -68,7 +68,7 @@ public class SaveLocation extends AppCompatActivity {
 
     private void backPage(){
         Intent i = new Intent();
-        i.setClass(this,Map.class);
+        i.setClass(this,MapPage.class);
         startActivity(i);
     }
 }

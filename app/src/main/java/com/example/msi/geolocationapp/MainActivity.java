@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
     //Function for going to the next page
     private void nextPage(){
         Intent i = new Intent();
-        i.setClass(this, Map.class);
+        i.setClass(this, MapPage.class);
         startActivity(i);
     }
 }

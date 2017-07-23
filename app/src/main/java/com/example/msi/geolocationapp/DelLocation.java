@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.location.Location;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -14,8 +15,10 @@ import java.util.Map;
 import io.skygear.skygear.Container;
 import io.skygear.skygear.Database;
 import io.skygear.skygear.Error;
+import io.skygear.skygear.Query;
 import io.skygear.skygear.Record;
 import io.skygear.skygear.RecordDeleteResponseHandler;
+import io.skygear.skygear.RecordQueryResponseHandler;
 
 public class DelLocation extends AppCompatActivity {
     private Location location;
@@ -49,28 +52,28 @@ public class DelLocation extends AppCompatActivity {
             }
         });
 
-        Record aRecord = new Record("LocationList");
-        aRecord.set("Location","Location item");
-        aRecord.set("LocationName",name);
-        aRecord.set("LocationInfo",location);
-
-        publicDB.delete(aRecord, new RecordDeleteResponseHandler() {
+        Query q = new Query("LocationList").equalTo("LocationName",name);
+        publicDB.query(q, new RecordQueryResponseHandler() {
             @Override
-            public void onDeleteSuccess(String[] ids) {
-                delMsg.setText("Location deleted successfully");
+            public void onQuerySuccess(Record[] records) {
+                Log.i("find", "query found");
+                publicDB.delete(records[0], new RecordDeleteResponseHandler() {
+                    @Override
+                    public void onDeleteSuccess(String[] ids) {delMsg.setText("Location deleted successfully");}
+                    @Override
+                    public void onDeletePartialSuccess(String[] ids, Map<String, Error> errors) {}
+                    @Override
+                    public void onDeleteFail(Error error) {delMsg.setText("Fail to delete location");}
+                });
             }
             @Override
-            public void onDeletePartialSuccess(String[] ids, Map<String, Error> errors) {}
-            @Override
-            public void onDeleteFail(Error error) {
-                delMsg.setText("Fail to delete location");
-            }
+            public void onQueryError(Error error) {delMsg.setText("Fail to delete location");}
         });
     }
 
     private void backPage(){
         Intent i = new Intent();
-        i.setClass(this,Map.class);
+        i.setClass(this,MapPage.class);
         startActivity(i);
     }
 }

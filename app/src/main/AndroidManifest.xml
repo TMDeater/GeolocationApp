@@ -39,7 +39,7 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".Map"
+            android:name=".MapPage"
             android:label="@string/title_activity_map" />
         <activity android:name=".SaveLocation" />
         <activity android:name=".DelLocation" />
